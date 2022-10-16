@@ -1,6 +1,6 @@
 public interface Project1StackInterface<T>
 {
-    void push(int suit, int face); //adds and element to the stack
+    void push(); //adds and element to the stack
 
     T pop(); //removes the top element of the stack, no return
 

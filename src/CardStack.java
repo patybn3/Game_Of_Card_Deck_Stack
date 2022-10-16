@@ -7,9 +7,27 @@ public class CardStack implements Project1StackInterface<Card>
     protected int countOne = 0;
     protected int countTwo = 0;
 
+    public CardStack()
+    {
+        this.cardsStack = new Stack<>();
+        push();;
+    }
+
     @Override
-    public void push(int suit, int face) {
-        
+    public void push() {
+        if(isFull())
+        {
+            System.out.println("This Deck is Full.");
+        }
+        else {
+            for (int i = 0; i < 13; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    cardsStack.add(new Card(j, i));
+                }
+            }
+        }
     }
 
     @Override
@@ -40,5 +58,10 @@ public class CardStack implements Project1StackInterface<Card>
     @Override
     public boolean isEmpty() {
         return false;
+    }
+
+    public boolean isFull()
+    {
+        return true;
     }
 }
