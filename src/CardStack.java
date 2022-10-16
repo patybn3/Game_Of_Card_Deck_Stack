@@ -84,4 +84,9 @@ public class CardStack implements Project1StackInterface<Card>
     {
         return !cardsStack.isEmpty();
     }
+
+    public void shuffle()
+    {
+        Collections.shuffle(cardsStack);
+    }
 }
