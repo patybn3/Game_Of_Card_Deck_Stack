@@ -57,6 +57,7 @@ public class CardStack implements Project1StackInterface<Card>
         }
     }
 
+    //I will use popTop() and clear() in the final assignment
     @Override
     public Card popTop()
     {
