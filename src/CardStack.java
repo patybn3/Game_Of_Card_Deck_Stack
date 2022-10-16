@@ -58,27 +58,30 @@ public class CardStack implements Project1StackInterface<Card>
     }
 
     @Override
-    public Card popTop() {
-        return null;
+    public Card popTop()
+    {
+        top();
+        return pop();
     }
 
     @Override
-    public int size() {
-        return 0;
+    public int size()
+    {
+        return cardsStack.size();
     }
 
     @Override
     public void clear() {
-
+        cardsStack = new Stack<>();
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return cardsStack.isEmpty();
     }
 
     public boolean isFull()
     {
-        return true;
+        return !cardsStack.isEmpty();
     }
 }
