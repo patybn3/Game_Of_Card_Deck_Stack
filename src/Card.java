@@ -9,4 +9,9 @@ public class Card<T> extends Stack<Card>
     private int suit;
     private int face;
 
+    public Card(T suit, T face)
+    {
+        this.suit = (int) suit;
+        this.face = (int) face;
+    }
 }
