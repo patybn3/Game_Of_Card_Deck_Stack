@@ -31,13 +31,30 @@ public class CardStack implements Project1StackInterface<Card>
     }
 
     @Override
-    public Card pop() {
-        return null;
+    public Card pop()
+    {
+        if(isEmpty())
+        {
+            System.out.println("There are no cards to draw.");
+            return null;
+        }
+        else
+        {
+            return cardsStack.pop();
+        }
     }
 
     @Override
-    public Card top() {
-        return null;
+    public Card top()
+    {
+        if(isEmpty())
+        {
+            System.out.println("There are no cards in the deck.");
+            return null;
+        }
+        else {
+            return cardsStack.peek();
+        }
     }
 
     @Override
